@@ -1,0 +1,395 @@
+baseURL = "https://charmpen.github.io/"
+languageCode = "en-us"
+theme = "aafu"
+
+[params]
+    title = "CharmPen Blog"
+    author = "CharmPen"
+    description = "blog title"
+    copyright = ""
+
+    [params.theme]
+        # Available themes are 'light', 'dark', and 'pinkish'
+        mainTheme = "dark"
+        # setting false below will hide 'aafu by darshan' displayed under the profile pic
+        showAttribute = false
+        singlePage = false
+
+    [params.favicons]
+        use = true
+        metas = '''
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#252627">
+        <link rel="shortcut icon" href="favicon.ico">
+        '''
+
+    # Profile section
+    [params.profile]
+        name = "Peng CHEN"
+		tagline = "Research Fellow"
+		location = "Curtin University, Perth, WA"
+        photo = "profile.jpg"
+
+    # Section for links to social websites
+    [params.social]
+        title = "Links"
+
+        [[params.social.list]]
+            class = "fab"
+            icon = "fa-linkedin-in"
+            url = "https://linkedin.com/in/peng-chen-198402"
+            title = "LinkedIn"		
+ #       [[params.social.list]]
+ #           class = "fab"
+ #           icon = "fa-stack-overflow"
+ #           url = "#"
+ #           title = "StackOverflow"
+        [[params.social.list]]
+            class = "fab"
+            icon = "fa-github"
+            url = "https://github.com/CharmPen?tab=repositories"
+            title = "GitHub"
+  #      [[params.social.list]]
+  #          class = "fab"
+  #          icon = "fa-twitter"
+  #          url = "#"
+  #          title = "Twitter"
+  #		[[params.social.list]]
+  #          class = "ai"
+  #          icon = "ai-google-scholar"
+  #          url = "#"
+  #          title = "Google Scholar"
+  #		[[params.social.list]]
+  #          class = "ai"
+  #          icon = "ai-researchgate"
+  #          url = "#"
+  #          title = "ResearchGate"
+
+    #Specify what is showin in the Accordion
+    [[params.showInAccordion]]
+        item = "aboutme"
+        expand = true   # true for the section that is initially expanded
+    [[params.showInAccordion]]
+        item = "experience"
+    [[params.showInAccordion]]
+        item = "education"
+    [[params.showInAccordion]]
+        item = "publication"
+    [[params.showInAccordion]]
+        item = "project"
+    [[params.showInAccordion]]
+        item = "skill"
+    [[params.showInAccordion]]
+        item = "hobby"
+
+    [params.aboutme]
+        title = "About Me"
+        icon = "fas fa-user"
+        description = "10 years experience on algorithm and system design.Strong research track record. A strong background in signal and information processing technologies researching and teaching. Strong software development skills using multi-language programming. Excellent oral and written communication skills."
+
+    # Experience section
+    [params.experience]
+        title = "Imployments"
+        icon = "fas fa-briefcase"
+
+        [[params.experience.list]]
+            position = "Research Fellow"
+            dates = "07.2020 - *Present*"
+            company = "Curtin University"
+            details = ""
+        [[params.experience.list]]
+            position = "IoT Software Engineer"
+            dates = "09.2019 - 06.2020"
+#            link = "#"
+            company = "InSig Technologies"
+        [[params.experience.list]]
+            position = "Full Stack Engineer"
+            dates = "03.2018 - 09.2019"
+#            link = "#"
+            company = "BEEBIRD LOGISTIC & FISHWEB PTY. LTD."
+        [[params.experience.list]]
+            position = "Sessional Academic"
+            dates = "02.2018 - 05.2018"
+#            link = "#"
+            company = "Curtin University"
+        [[params.experience.list]]
+            position = "Research Associate"
+            dates = "10.2014 - 12.2017 & 09.2018 - 12.2018"
+#            link = "#"
+            company = "Curtin University"
+        [[params.experience.list]]
+            position = "System Engineer"
+            dates = "08.2012 - 08.2014"
+#            link = "#"
+            company = "DaTang Mobile Communication Equipment co.ltd."
+        [[params.experience.list]]
+            position = "Research Engineer (Intern)"
+            dates = "08.2009 - 04.2010"
+#            link = "#"
+            company = "QUALCOMM (China)"
+        [[params.experience.list]]
+            position = "Research Associate"
+            dates = "08.2007 - 07.2012"
+#            link = "#"
+            company = "Information Theory and Technology Education Research Center, BUPT"
+
+    # Education section
+    [params.education]
+        title = "Education"
+        icon = "fas fa-graduation-cap"
+
+        [[params.education.list]]
+            degree = "Ph.D. of Engineering"
+            college = "Beijing University of Posts and Telecommunications"
+            dates = "2009 - 2013"
+            thesis_title = "Estimation and Mitigation of the Phase Noise and Carrier Frequency Offset in Wireless Communication Systems."
+            thesis_link = "#"
+        #[[params.education.list]]
+        #    degree = "M.S. in Subject"
+        #    college = "University of State-City"
+        #    dates = "2013 - 2018"
+        #    thesis_title = "Effect of humans on other humans: a study of human behavior."
+        #    thesis_link = "#"
+        [[params.education.list]]
+            degree = "B.S. in Engineering"
+            college = "Beijing University of Posts and Telecommunications"
+            dates = "2003 - 2007"
+
+    # Publication section
+    [params.publication]
+        title = "Publications"
+        icon = "fas fa-book"
+        #The order below determines the order in which the items appear in "Publications" section
+        format = ["date", "authors", "title", "journal"]
+        #If you don't want to group publications, comment the line below by adding # at the beginning
+        types = ["Journal Articles", "Conference Articles"]
+
+        [[params.publication.list]]
+            title = "New Results on Joint Channel and Impulsive Noise Estimation and Tracking in Underwater Acoustic OFDM Systems"
+            authors = "Shuche Wang, Zhiqiang He, Kai Niu, Peng Chen"
+            date = "2020"
+            journal = "IEEE Transactions on Wireless Communications (Accept)"
+            link = "#"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "An Underwater Acoustic OFDM System Based on NI CompactDAQ and LabVIEW"
+            authors = "Peng Chen, Yue Rong, Sven Nordholm, Zhiqiang He"
+            date = "Dec. 2019"
+            journal = "IEEE Systems Journal,  Volume: 13 , Issue: 4"
+            link = "#"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Joint Channel Estimation and Impulsive Noise Mitigation in Underwater Acoustic OFDM Communication Systems"
+            authors = "P. Chen, Y. Rong, S. Nordholm, Z. He and A. Duncan"
+            date = "Sept. 2017"
+            journal = "IEEE Transactions on Wireless Communications, Volume: 16 , Issue: 9"
+            link = "#"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "oint Channel and Impulsive Noise Estimation in Underwater Acoustic OFDM Systems"
+            authors = "P. Chen, Y. Rong, S. Nordholm, and Z. He"
+            date = "Nov. 2017"
+            journal = "IEEE Trans. Veh. Technol., Volume: 66 , Issue: 11"
+            link = "#"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Particle filter based automatic frequency control scheme by combining the two-step structure"
+            authors = "Peng CHEN, Ju-hu LI, Kai NIU, Wei-ling WU"
+            date = "April 2012"
+            journal = "The Journal of China Universities of Posts and Telecommunications, Volume 19, Issue 2"
+            link = "#"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Phase noise correction for OFDM signal based on DCT approach and variational inference"
+            authors = "Peng CHEN, Nan LI, Ju-hu LI, Zhi-qiang HE, Wei-ling WU"
+            date = "June 2012"
+            journal = "The Journal of China Universities of Posts and Telecommunications, Volume 19, Issue 3"
+            link = "#"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Effect of Carrier Frequency Offset on Performance of MIMO-OFDM Systems in the Presence of Channel Estimation Error"
+            authors = "Ju-hu Li, Peng Chen, Zhi-qiang He, Wei-ling Wu"
+            date = "2012"
+            journal = "Journal of South China University of Technology, 40(3): 43-48"
+            link = "#"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Analysis on Performance of MIMO-OFDM Systems in Presence of Channel Estimation Error over Double-Selective Rayleigh Channels"
+            authors = "Ju-hu Li, Peng Chen, Zhi-qiang He, Wei-ling Wu"
+            date = "2012"
+            journal = "Journal Of Beijing University of Posts and Telecommunications, 35(1): 107-110"
+            link = "#"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "MMSE based joint Tomlinson-Harashima source and linear relay precoder design in non-regenerative MIMO relay system"
+            authors = "Nan Li, Peng CHEN, Zhi-qiang HE, Jiaru Lin"
+            date = "2012"
+            journal = "The Journal of China Universities of Posts and Telecommunications, 19 (4): 56-63"
+            link = "#"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "A LabVIEW-Based Implementation of Real-Time Adaptive Modulation for Underwater Acoustic OFDM Communication" 
+            authors = "Suchi Barua, Yue Rong, Sven Nordholm, Peng Chen"
+            date = "2020"
+            journal = "Proc. MTS/IEEE OCEANS 2020, Singapore (Accept)"
+            link = "#"
+            type = "Conference Articles"
+
+        [[params.publication.list]]
+            title = "Adaptive Modulation for Underwater Acoustic OFDM Communication" 
+            authors = "Suchi Barua, Yue Rong, Sven Nordholm, Peng Chen"
+            date = "2019"
+            journal = "Proc. MTS/IEEE OCEANS, Marseille, France"
+            link = "#"
+            type = "Conference Articles"
+
+        [[params.publication.list]]
+            title = "A Sparse Bayesian Learning Based Joint Channel and Impulsive Noise Estimation Algorithm for Underwater Acoustic OFDM Systems" 
+            authors = "Shuche Wang ; Zhiqiang He ; Kai Niu ; Peng Chen ; Yue Rong"
+            date = "2018"
+            journal = "Proc. MTS/IEEE OCEANS, Kobe, Japan"
+            link = "#"
+            type = "Conference Articles"
+
+        [[params.publication.list]]
+            title = "LabVIEW-Based Implementation of Real-Time Underwa-ter Acoustic OFDM System" 
+            authors = "Peng Chen, Yue Rong, Sven Nordholm, Alec J. Duncan, Zhiqiang He"
+            date = "2017"
+            journal = "Proc. APCC, Perth, WA, Australia"
+            link = "#"
+            type = "Conference Articles"
+
+        [[params.publication.list]]
+            title = "A compressive sensing based iterative algorithm for channel and impulsive noise estimation in underwater acoustic OFDM systems" 
+            authors = "Jinnian Zhang, Zhiqiang He, Peng Chen, Yue Rong"
+            date = "2017"
+            journal = "Proc. MTS/IEEE OCEANS, Anchorage, AK, USA"
+            link = "#"
+            type = "Conference Articles"
+
+        [[params.publication.list]]
+            title = "Compressed Sensing Based Channel Estimation and Impulsive Noise Cancelation in Underwater Acoustic OFDM Systems" 
+            authors = "P. Chen, Y. Rong, S. Nordholm, Z. He and A. Duncan"
+            date = "2016"
+            journal = "Proc. IEEE TENCON, Singapore"
+            link = "#"
+            type = "Conference Articles"
+
+        [[params.publication.list]]
+            title = "Pilot-subcarrier Based Impulsive Noise Mitigation for Underwater Acoustic OFDM Systems" 
+            authors = "P. Chen, Y. Rong, and S. Nordholm"
+            date = "2016"
+            journal = "Proc. WUWNet 2016, Shanghai, China"
+            link = "#"
+            type = "Conference Articles"
+
+        [[params.publication.list]]
+            title = "Variational Bayesian Channel Tracking in High-speed Underwater Acoustic Communication" 
+            authors = "P. Chen, Y. Rong, and S. Nordholm"
+            date = "2015"
+            journal = "Proc. WUWNet 2015, Washington, DC, USA"
+            link = "#"
+            type = "Conference Articles"
+
+        [[params.publication.list]]
+            title = "Forward-Backward Block-wise Channel Tracking in High-speed Underwater Acoustic Communication" 
+            authors = "P. Chen, Y. Rong, S. Nordholm, and Z. He"
+            date = "2015"
+            journal = "Proc. MTS/IEEE OCEANS, Washington, DC, USA"
+            link = "#"
+            type = "Conference Articles"
+
+        [[params.publication.list]]
+            title = "ode aided CPO estimation based on particle filtering" 
+            authors = "Peng Chen, Zhiqiang He, Baoyu Tian"
+            date = "2011"
+            journal = "Wireless Communications and Signal Processing (WCSP), 2011 International Conference on"
+            link = "#"
+            type = "Conference Articles"
+
+#        [[params.publication.list]]
+#            title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+#            authors = "F Last, F Second, P secondary"
+#            date = "2018"
+#            journal = "Journal of Field 52 (16), 9033-9044"
+#            link = "#"
+#            type = "Journal Articles"
+
+#        [[params.publication.list]]
+#            title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+#            authors = "F Last, F Second, P secondary"
+#            date = "2018"
+#            journal = "Journal of Field 52 (16), 9033-9044"
+#            link = "#"
+#            type = "Conference Articles"
+
+    # Project section
+#    [params.project]
+#        title = "Projects"
+#        icon = "fas fa-project-diagram"
+
+#        [[params.project.list]]
+#            title = "project"
+#            url = "#"
+#            description = "Description of the project"
+#        [[params.project.list]]
+#            title = "project"
+#            url = "#"
+#            description = "Description of the project"
+#        [[params.project.list]]
+#            title = "project"
+#            url = "#"
+#            description = "Description of the project"
+#        [[params.project.list]]
+#            title = "project"
+#            url = "#"
+#            description = "Description of the project"            
+
+    # Skill section
+    [params.skill]
+        title = "Skills"
+        panelId = "skill-panel"
+        icon = "fas fa-cogs"
+
+        [[params.skill.list]]
+            skill = "Signal Processing, Telecommunication System"
+            skillrating = 90
+        [[params.skill.list]]
+            skill = "IoT Technologies, Web Technologies"
+            skillrating = 70
+        [[params.skill.list]]
+            skill = "Matlab, Python"
+            skillrating = 90
+        [[params.skill.list]]
+            skill = "C/C++, LabVIEW, JavaScript"
+            skillrating = 70
+        [[params.skill.list]]
+            skill = "Golang"
+            skillrating = 30
+        [[params.skill.list]]
+            skill = "English"
+            skillrating = 70
+
+    # Hobby section
+#    [params.hobby]
+#        title = "Hobbies"
+#        icon = "fas fa-gamepad"
+#		
+#        [[params.hobby.list]]		
+#		    hobby = "Cooking"
+#        [[params.hobby.list]]		
+#		    hobby = "Hiking"
+#        [[params.hobby.list]]		
+#		    hobby = "Baking"
